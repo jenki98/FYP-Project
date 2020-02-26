@@ -8,13 +8,13 @@ public class AlexaRangeDetection : MonoBehaviour
     private int range = 12; //example of device range tbc 
     private Transform device;
     private Transform player; //change to user
-    private RangeSlider rs;
+
 
     private void Awake()
     {
         device = this.transform;
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        rs = GameObject.FindObjectOfType<RangeSlider>();
+      
         //This will then change to vr position 'HeadAnchor', 'HeadsetAlias', 'VRTK Player'
 
     }
@@ -32,7 +32,7 @@ public class AlexaRangeDetection : MonoBehaviour
         if (player)
         {
             Distance();
-            rs.rangDist(dist);
+           
             print(player.name + " is " + dist.ToString() + " units from " + device.name); //Just to test that is calculates range until I get range bar working
         }
           
